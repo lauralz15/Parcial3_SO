@@ -2,6 +2,9 @@
 ```markdown
 # Parcial 3 — Seguridad de archivos mediante mmap en capa de kernel
 
+Laura Sofia Lizarazo, Isabella Hernández Posada, Jaime Jesús Cotes y Cristóbal
+Rodríguez
+
 ## Alcance real de esta implementación
 
 Esta versión utiliza **BPF LSM** y el hook `lsm/mmap_file` para aplicar una política demostrable: rechazar `mmap()` con `PROT_WRITE | MAP_SHARED` sobre un archivo regular que se registra al iniciar el loader. Los mapeos de solo lectura/privados no se rechazan por esta regla. La decisión se toma en el kernel; no es un wrapper de libc.
